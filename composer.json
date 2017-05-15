@@ -1,0 +1,17 @@
+{
+    "name":         "sr/agreement-position",
+    "license":      "GPL-3.0",
+    "type":         "magento-module",
+    "description":  "Add 'Position' to Checkout Agreements.",
+    "homepage":     "https://github.com/sreichel/magento-Sr-AgreementPosition",
+    "authors": [
+        {
+            "name":  "Sven Reichel",
+            "email": "github-sr@hotmail.com",
+            "role":  "Author/Maintainer"
+        }
+    ],
+    "require": {
+        "magento-hackathon/magento-composer-installer" : "*"
+    }
+}

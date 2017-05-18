@@ -12,6 +12,8 @@ class Sr_AgreementPosition_Model_Observer
             $helper = Mage::helper('sr_agreement');
             $form = $block->getForm();
 
+            $form->getElement('content')->setRequired(false);
+
             /** @var Varien_Data_Form_Element_Fieldset $fieldset */
             $fieldset = $form->getElement('base_fieldset');
 
@@ -23,11 +25,6 @@ class Sr_AgreementPosition_Model_Observer
                 'required' => true,
                 'class'    => 'validate-zero-or-greater',
             ));
-
-            // Mage::dispatchEvent('sr_agreement_adminhtml_checkout_agreement_edit_form', array(
-                // 'form'     => $form,
-                // 'fieldset' => $fieldset,
-            // ));
 
             $model = Mage::registry('checkout_agreement');
             $form->setValues($model->getData());
